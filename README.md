@@ -17,15 +17,23 @@ BTCP allows AI agents to call browser-side tools with direct access to browser c
 
 Before running these examples, you need:
 
-1. **Chrome Browser** with the BTCP extension installed
+1. **Chrome Browser** with the BTCP extension installed (required)
 2. **BTCP MCP Server** running locally
 3. An **MCP-compatible AI agent** (Claude Desktop, Claude Code, etc.)
 
+> **Why is the Chrome extension required?**
+>
+> The MCP server alone cannot access your browser - it's just a bridge that translates MCP protocol calls. The Chrome extension is what actually executes tools inside the browser with access to tabs, DOM, and page context. Both components are required:
+> - **MCP Server** = Bridge between AI agent and browser
+> - **Chrome Extension** = Executes tools with browser access
+
 ## Quick Setup
 
-### 1. Install the Chrome Extension
+### 1. Install the Chrome Extension (Required)
 
-Install the BTCP Chrome extension from the [btcp-chrome repository](https://github.com/browser-tool-calling-protocol/btcp-chrome):
+The Chrome extension is required - it provides the actual browser access that BTCP tools need.
+
+Install from the [btcp-chrome repository](https://github.com/browser-tool-calling-protocol/btcp-chrome):
 
 1. Clone or download the extension
 2. Open Chrome and navigate to `chrome://extensions/`
