@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "btcp": {
+      "command": "node",
+      "args": ["/path/to/btcp-mcp/dist/index.js"]
+    }
+  }
+}
